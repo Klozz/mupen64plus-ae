@@ -67,6 +67,6 @@ extern "C" DECLSPEC void Java_paulscode_android_mupen64plusae_CoreInterfaceNativ
 
     status = SDL_main( argc, argv );  // Launch the emulator
 
-    /* We exit here for consistency with other platforms. */
-    exit( status );  // <---- TODO: This is the ASDP bug culprit
+    /* Do not issue an exit or the whole application will terminate instead of just the SDL thread */
+    //exit(status);
 }

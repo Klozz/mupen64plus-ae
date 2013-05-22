@@ -81,9 +81,6 @@ extern void         Android_JNI_GetDisplaySize(const int maxWidth, const int max
 // SDL functions - TODO: Remove (plugins shouldn't be calling these directly)
 extern void         Android_JNI_SwapWindow();
 
-// Global flags - TODO: Remove when ASDP bug fixed
-extern int do_Start;
-
 #ifdef __cplusplus
 }
 #endif
