@@ -626,10 +626,15 @@ extern "C" {
 #endif
 
 
+static int fbcount = 0;
 EXPORT void CALL ProcessDList(void)
 {
+  // quick and dirty frameskip
+  fbcount++;
+  int skipped = (fbcount % 2) == 0;
+
   SoftLocker lock(mutexProcessDList);
-  if (!lock.IsOk()) //mutex is busy
+  if (skipped || !lock.IsOk()) //mutex is busy
   {
     if (!fullscreen)
       drawNoFullscreenMessage();
