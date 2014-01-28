@@ -1,3 +1,10 @@
+KLOZZ NOTE:
+===========
+
+I'm Forked this code only for study :) maybe later i'm try to help , with my contributions...
+
+
+
 mupen64plus-ae
 ==============
 
